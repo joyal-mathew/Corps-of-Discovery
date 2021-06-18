@@ -32,6 +32,7 @@ await write("Enter to continue").then(read).then(clear);
 
 for (; state.traveled < 4000; state.traveled += state.other.morale) {
     const event = getEvent();
+    console.log(state.hidden.animosity / 100);
 
     await write(event.text()).then(() => read(event.validate)).then(input => write(event.handle(input)));
     state.other.food = checkedAdd(state.other.food, -10);
@@ -56,6 +57,10 @@ for (; state.traveled < 4000; state.traveled += state.other.morale) {
     }
     if (!presentCrew().length) {
         write("Your entire crew is gone. You are left to wander the wilderness for the rest of your sad life, unable to complete your journey.<br><br>Refresh the page to play again.");
+        return;
+    }
+    if (!state.hidden.submissiveness) {
+        write("Your crew turn mutinous and decides to go off on their own. You are left to wander the wilderness alone.<br><br>Refresh the page to play again.");
         return;
     }
 }

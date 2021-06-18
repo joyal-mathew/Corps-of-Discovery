@@ -39,15 +39,15 @@ const events = [
         handle(input) {
             switch (input) {
                 case "1":
-                    state.hidden.relations = checkedAdd(state.hidden.relations, randint(0, 10));
+                    state.hidden.animosity = checkedAdd(state.hidden.animosity, randint(-10, 0));
                     state.other.ammo = checkedAdd(state.other.ammo, -2);
                     return "You give 2 ammo. They seem to appreciate it.<br>";
                 case "2":
-                    state.hidden.relations = checkedAdd(state.hidden.relations, randint(-5, 5));
+                    state.hidden.animosity = checkedAdd(state.hidden.animosity, randint(0, 10));
                     state.other.ammo = checkedAdd(state.other.ammo, -1);
                     return "You give 1 ammo. They are not happy.<br>";
                 case "3":
-                    state.hidden.relations = checkedAdd(state.hidden.relations, randint(-10, 0));
+                    state.hidden.animosity = checkedAdd(state.hidden.animosity, randint(10, 50));
                     return "You give 0 ammo. They are angry.<br>";
             }
         }

@@ -6,6 +6,7 @@ html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
+    font-size: 2vh;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     outline: none;
     font-size: var(--input-size);
     font-family: inherit;
+    font-size: inherit;
 }
 
 .invalidInput {
