@@ -1,0 +1,53 @@
+:root {
+    --input-size: 2vh;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#header {
+    flex-basis: 10vh;
+}
+
+#story {
+    margin-top: auto;
+}
+
+#input {
+    flex-basis: var(--input-size);
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-size: var(--input-size);
+    font-family: inherit;
+}
+
+.invalidInput {
+    position: fixed;
+    z-index: 1;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    color: red;
+    animation-name: fadeaway;
+    animation-duration: 2s;
+}
+
+@keyframes fadeaway {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

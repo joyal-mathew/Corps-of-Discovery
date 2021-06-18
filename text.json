@@ -1,0 +1,12 @@
+{
+    "intro": {
+        "init": "",
+        "names": {
+            "lt": "",
+            "sgt": "What is the  name?<br>",
+            "pvt": "What is the  name?<br>",
+            "intpr": "What is the  name?<br>",
+            "dog": "What is the  name?<br>"
+        }
+    }
+}
